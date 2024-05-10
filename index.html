@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="shortcut icon" type="x-icon" href="assets/img/RanKING - Concept.png">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <title>Ingrese a RanKING!</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="login__content">
+                <img src="assets/img/Background.png" alt="login image" class="login__img">
+
+                    <div class="QrCode">
+                    <img src="assets/img/RanKING! - QR Code.jpg" alt="QR code"/>
+                    </div>
+    
+                <form id="loginForm" class="login__form">
+                    <div>
+                        <h1 class="login__title">
+                            Bienvenid<span>@</span> a <span>RanKING!</span>
+                        </h1>
+                        <p class="login__description">
+                            Bienvenido/a! Favor, ingrese a sus datos.
+                        </p>
+                    </div>
+                    
+                    <div class="login__inputs">
+                        <div>
+                            <label for="nombre" class="login__label">Nombre</label>
+                            <input type="text" id="nombre" placeholder="Ingresa tu Nombre." required class="login__input" oninput="validateName(event)">
+                            <div id="nameError" class="error-message">Los Números y Caracteres Especiales <u>NO</u> están permitidos.</div>
+                        </div>
+    
+                        <div class="login__select">
+                            <label for="curso" class="login__label">Aula / Curso</label>
+    
+                            <div class="wrapper">
+                                <div class="select-btn">
+                                  <span class="default-text">Selecciona tu Aula / Curso</span>
+                                  <i class="uil uil-angle-down"></i>
+                                </div>
+                                <div class="content">
+                                  <div class="search">
+                                    <i class="uil uil-search"></i>
+                                    <input spellcheck="false" type="text" placeholder="Encuntra tu aula ..." required class="login__input">
+                                  </div>
+                                  <ul class="options"></ul>
+                                </div>
+                              </div>
+                              <div id="cursoError" class="error-message">Por favor, Selecciona tu Aula / Curso.</div>
+                    </div>
+    
+                    <div class="login__check">
+                        <input type="checkbox" class="login__check-input" id="input-check">
+                        <label for="input-check" class="login__check-label">Explora este Desafío!</label>
+                    </div>
+    
+                    <div class="login__buttons">
+                        <button id="submitButton" class="login__button" onclick="submitForm()">ACCEDER</button>
+                    </div>
+    
+                    <p class="notice">
+                        <span><u>Aviso</u></span>: Los <span>datos ingresados</span> en la <u>Página de Ingreso</u> <span>NO</span> se <span>almacenan</span>; son datos de <span>ingreso temporales</span>. <span>¡Disfruta!</span>
+                    </p>
+                    
+                    <div class="login__alert" style="display: none;">
+                        <p class="alert-message"></p>
+                </form>
+            </div>
+        </div>
+
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
