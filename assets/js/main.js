@@ -129,7 +129,7 @@ function validateName() {
     name = removeAccents(name);
 
     if (regex.test(name)) {
-        nameError.textContent = "Los Números, Emojis y Caracteres Especiales no están permitidos.";
+        nameError.textContent = "Los Números, Emojis y/o Caracteres Especiales no están permitidos.";
         nameError.style.display = "block";
         nameInput.classList.add("error-border");
         document.getElementById("submitButton").disabled = true;
